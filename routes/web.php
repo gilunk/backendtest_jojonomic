@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/owner', 'collectionController@home');
+Route::get('/visitor', 'visitorController@home');
