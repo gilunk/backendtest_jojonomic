@@ -13,5 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// OWNER
 Route::get('/owner', 'collectionController@home');
+Route::get('/owner/add', 'collectionController@add');
+Route::post('/owner/create', 'collectionController@create');
+Route::get('/owner/{id}/edit', 'collectionController@edit');
+Route::post('/owner/{id}/update', 'collectionController@update');
+Route::get('/owner/{id}/delete', 'collectionController@delete');
+
+// VISITOR
 Route::get('/visitor', 'visitorController@home');
+Route::get('/visitor/addrent', 'visitorController@addrent');
+

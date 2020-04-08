@@ -10,6 +10,8 @@ class visitorController extends Controller
 {
     function home()
     {
-        return view('visitor');
+        $data = t_cd::all();
+        $rented = t_user::all();
+        return view('visitor', compact('data', 'rented'));
     }
 }
