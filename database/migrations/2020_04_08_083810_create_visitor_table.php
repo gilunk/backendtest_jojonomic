@@ -21,7 +21,7 @@ class CreateVisitorTable extends Migration
             $table->tinyInteger('many_cds');
             $table->enum('status_rent', ['Unreturned', 'returned']);
             $table->integer('total_price')->nullable();
-            $table->foreign('id_cd')->references('id')->on('collection');
+            $table->foreign('id_cd')->references('id')->on('collection')->onDelete('cascade');
             $table->timestamps();
         });
     }
