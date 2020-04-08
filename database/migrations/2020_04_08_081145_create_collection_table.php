@@ -16,7 +16,7 @@ class CreateCollectionTable extends Migration
         Schema::create('collection', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 100);
-            $table->decimal('rate');
+            $table->integer('rate');
             $table->string('category', 50);
             $table->integer('quantity');
             $table->timestamps();

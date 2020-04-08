@@ -23,5 +23,7 @@ Route::get('/owner/{id}/delete', 'collectionController@delete');
 
 // VISITOR
 Route::get('/visitor', 'visitorController@home');
-Route::get('/visitor/addrent', 'visitorController@addrent');
+Route::get('/visitor/{id_cd}/addrent', 'visitorController@addrent');
+Route::post('/visitor/{id_cd}/createrent', 'visitorController@createrent');
+Route::get('/visitor/{id_cd}/{id_rent}', 'visitorController@returningcd');
 
